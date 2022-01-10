@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+  <head>
+    <title>TODO</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+
+</head>
+
+  <body>
+
+    <!-- navbar -->
+        <div class="toolbar">
+
+            <!-- color pallete -->
+            <div class="color-bar">
+
+                <div class="filter">
+                    <div class="filter_color palevioletred"><p class="tooltiptext">Priority 1</p></div>
+                    
+                </div>
+                <div class="filter">
+                    <div class="filter_color blue"><p class="tooltiptext">Priority 2</p></div>
+                </div>
+                <div class="filter">
+                    <div class="filter_color limegreen"><p class="tooltiptext">Priority 3</p></div>
+                </div>
+                <div class="filter">
+                    <div class="filter_color black"><p class="tooltiptext">Priority 4</p></div>
+                </div>
+
+
+
+            </div>
+
+
+            <!-- action container -->
+            <div class="action-container">
+
+                <div class="action-icon">
+                    <i class="fas fa-plus fa-lg"></i>
+                </div>
+                <div class="action-icon">
+                    <i class="fas fa-times fa-lg"></i>
+                </div>
+
+            </div>
+
+
+            <!-- refresh button -->
+
+            <div class="refresh-container">
+
+                <div class="refresh-icon">
+                    <i class="fas fa-sync-alt"><p class="tooltiptext2">Refresh</p></i>
+                    
+                </div>
+                <div class="delete-icon">
+                    <i class="fas fa-trash-alt"><p class="tooltiptext2">Delete Completed Task</p></i>
+                    
+                </div>
+                <!-- 
+                -->
+            </div>
+
+        </div>
+
+        <div class="main-container">
+        
+            <div class="all-task-container">
+              
+            </div>
+            <div class="completed-task-container">
+                <p class = "task-heading">COMPLETED TASK</p>
+                <div class="completed-task-list">
+                   
+                </div>
+            </div>
+           
+        </div>
+
+         <!-- we can use defer when we want this file to load after html,css and non defer scripts -->
+         <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js" defer></script>
+    
+        <script type="text/javascript" src="script.js" defer></script>
+  </body>
+
+  
+
+ 
+</html>

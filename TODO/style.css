@@ -1,0 +1,409 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  /* background-color: whitesmoke; */
+ 
+  background: #E8CBC0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.toolbar {
+  height: 11vh;
+  width: 100%;
+  background-color: #2d3436;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 10%;
+  position: relative;
+  justify-content: space-between;
+}
+
+.color-bar {
+  height: 55%;
+  width: 12rem;
+  margin-right: 4rem;
+  border-radius: 0.2rem;
+  background-color: #535c68;
+  display: flex;
+}
+
+.filter {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter_color {
+  height: 40%;
+  width: 45%;
+  border-radius: 0.3rem;
+}
+
+.palevioletred {
+  background-color: palevioletred;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.limegreen {
+  background-color: limegreen;
+}
+
+.black {
+  background-color: black;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: #204051;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin-top: 30px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+.filter_color:hover .tooltiptext {
+  visibility: visible;
+}
+
+.fa-sync-alt:hover .tooltiptext {
+  visibility: visible;
+}
+
+.action-container {
+  height: 55%;
+  width: 6rem;
+  background-color: #535c68;
+  border-radius: 0.2rem;
+  display: flex;
+  border-radius: 0.2rem solid;
+  
+  margin-left:20px;
+  margin-right: 20px;
+}
+
+.refresh-container{
+
+  height: 55%;
+  width: 6rem;
+  background-color: #535c68;
+  border-radius: 0.2rem;
+  display: flex;
+  border-radius: 0.2rem solid;
+  margin:auto;
+  margin-right: 0px;
+}
+
+
+.action-icon,.refresh-icon,.delete-icon {
+  width: 50%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}
+
+
+.tooltiptext2 {
+  visibility: hidden;
+  width: 120px;
+  background-color: #204051;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin-top: 10px;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+.fa-plus,.fa-times{
+  width:100%;
+  height:100%;
+  padding-top: 20%;
+  padding-left: 30%;
+}
+
+
+.fa-sync-alt,.fa-trash-alt{
+  width:100%;
+  height:100%;
+  padding-top: 20%;
+  padding-left: 30%;
+}
+
+.fa-sync-alt:hover .tooltiptext2 {
+  visibility: visible;
+  margin-top:0px;
+}
+
+.fa-trash-alt:hover .tooltiptext2 {
+  visibility: visible;
+  width: 150px;
+  margin-top:0px;
+  
+}
+
+
+.active {
+  background-color: #2d3436;
+}
+
+.main-container {
+  /* background: #8e9eab;  fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #fdfcfb , #e2d1c3);  Chrome 10-25, Safari 5.1-6 */
+
+  height: 89vh;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 0px;
+  margin-right: 0px;
+ 
+}
+
+.all-task-container{
+
+  width: 70%;
+  height: 100%;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-right: 10px;
+
+}
+
+.completed-task-container{
+
+  width: 25%;
+  height: 95%;
+  margin-top: 6px;
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  background: linear-gradient(
+    160deg,
+    #fdfcfb,
+    #e2d1c3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
+
+}
+
+.task-heading
+{
+  color:rgb(51, 115, 167);
+  margin-top: 10px;
+  font-size: 200%;
+  width: 100%;
+  height:fit-content;
+  text-align: center;
+  font-weight: 500;
+  font-family: cursive;
+ 
+}
+
+.completed-task-list{
+
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  
+}
+
+.modal_container {
+  position: absolute;
+  height: 50%;
+  width: 45%;
+  background-color: brown;
+  left: 25%;
+  top: 30vh;
+  display: flex;
+  outline: none;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 1);
+}
+
+.input_container {
+  height: 100%;
+  width: 73%;
+  outline: none;
+}
+
+.modal_input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 2rem 3rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  line-height: 145%; /* to increase height between lines */
+  font-weight: 600;
+}
+
+.modal_filter_container {
+  width: 27%;
+  background-color: #455556;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.7rem 1.2rem;
+}
+
+textarea {
+  border: none;
+}
+
+.filter_task {
+  height: 15%;
+  width: 60%;
+  opacity: 0.7;
+}
+
+.filter_task:hover {
+  opacity: 1;
+}
+
+.border {
+  border: 0.2rem solid #d2dae2;
+}
+
+/* task css */
+
+
+
+.task_container {
+  height: 11rem;
+  width: 18rem;
+  box-shadow: 0 1rem 1.5rem rgba(63, 55, 55, 0.2);
+  
+}
+
+.completed_task_container{
+  min-height: 11rem;
+  width: 18rem;
+  padding-bottom: 20px;
+}
+
+.task_header_color {
+  height: 7%;
+}
+
+
+.task_body {
+  padding-left: 0.5rem;
+  padding-top: 00.5rem;
+  background-color: #fdfdfd;
+  height: 93%;
+}
+
+.uid {
+  color: #778ca3;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  height: 15%;
+}
+
+
+/* added contentediatble = true in script so that we can add in task conatiner also */
+.task_desc {
+  text-align: center;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  height: 65%;
+  overflow: auto;
+  word-break: break-all;
+  text-align: center;
+}
+
+
+.task-footer{
+
+  height : 20%;
+  /* background-color: black; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.edit , .done{
+  width:50%;
+}
+
+.edit{
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.done{
+  text-align: right;
+  margin-right: 2rem;
+}
+
+.fa-pencil-alt{
+ 
+ 
+  color: #838383;
+  font-size: 20px;
+}
+
+.fa-check-circle{
+
+  font-size: 20px;
+  width: 50%;
+  color: #ad9d9d;
+}
+
+.fa-check-circle:hover .tooltiptext2 {
+  visibility: visible;
+}
+
+.fa-pencil-alt:hover .tooltiptext2 {
+  visibility: visible;
+  width: 50px;
+}
+
+.fa-check-circle:hover , .fa-pencil-alt:hover{
+ color : #3b6978;
+} 
+
+
+@media only screen and (max-width: 1080px) {
+  
+  .all-task-container{
+    width: 50%;
+  }
+  .completed_task_container{
+    width:50%;
+  }
+}
